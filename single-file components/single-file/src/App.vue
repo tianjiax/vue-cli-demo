@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <p>当前路由name：{{ this.$route.name }}</p>
+    <p>当前路由path：{{ this.$route.path }}</p>
     <div class="route-a-box">
       <router-link class="router-a" to="/">home</router-link>
       <router-link class="router-a" to="/demo">demo</router-link>

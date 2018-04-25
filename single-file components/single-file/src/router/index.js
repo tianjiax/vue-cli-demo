@@ -14,7 +14,7 @@ export default new Router({
   routes: [
     {// 首页
       path: '/',
-      name: 'HelloWorld',
+      name: 'home',
       component: HelloWorld
     },
     {// demo

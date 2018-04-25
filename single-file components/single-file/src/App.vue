@@ -3,8 +3,7 @@
     <img src="./assets/logo.png">
     <div class="route-a-box">
       <router-link class="router-a" to="/">home</router-link>
-      <router-link class="router-a" to="/Rating">Star</router-link>
-      <router-link class="router-a" to="/TodoList">TodoList</router-link>
+      <router-link class="router-a" to="/demo">demo</router-link>
     </div> 
     <router-view/>
   </div>

@@ -40,7 +40,7 @@ export default{
     font-size: 14px;
     color: #a7a8a8;
     .list {
-	  margin: 0 0 5px 0;
+	  margin:0 auto;
 	  padding: 0;
 	  list-style-type: none;
 	}

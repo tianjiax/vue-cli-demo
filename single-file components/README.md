@@ -1,184 +1,81 @@
 # 简单插件开发
 > 基于vue-cli开发，简单的一些组件及vue-cli问题的记录。
 
-请自行下载vue-cli demo进行查看
-```
-# 全局安装 vue-cli
-$ npm install --global vue-cli
-# 下载demo
-$ git clone https://github.com/tianjiax/vue-cli-demo.git
-# 进入项目
-$ cd single-file components
-# 安装依赖
-$ npm init
-# 启动项目
-$ npm run dev
-```
-### 路由
-> 简单路由配置及子路由配置，详看如下：
+### 简单评分系统
+```js
+// main.js
+import Vue from 'vue'
+import Rating from './components/Rating.vue'
 
-```html
-<!-- App.vue页面 -->
+new Vue({
+  el: '#app',
+  components: { Rating },
+  template: '<Rating/>'
+})
+
+```
+```vue
 <template>
-  <div id="app">
-    <div class="route-a-box">
-      <router-link class="router-a" to="/">home</router-link>
-      <router-link class="router-a" to="/demo">demo</router-link>
-    </div> 
-    <router-view/>
+  <!-- 我们在 HTML 中添加了一个<div>标签？这是因为我们还在根级别的<span>中添加了一个计数器，Vue.js 中的组件模板只接受一个根元素。如果你不遵守，会得到一个编译错误。 -->
+  <div class="rating">
+    <ul class="list">
+    <!-- 循环输出，根据stars及maxStars的值来判定是否选中，添加changeStar事件来进行星级计算 -->
+      <li @click="changeStar(star)" v-for="star in maxStars" :class="{ 'active': star <= stars }" class="star">★</li>
+    </ul>
+    <!-- 动态绑定输出选中星级及总星级-->
+    <span>{{ stars }} of {{ maxStars }}</span>
   </div>
 </template>
 
 <script>
-
-// Vue 实例化
-export default {
-  // vue组件的name属性主要用于方便debug.
-  name: 'App'
-}
-</script>
-
-<style>
-...
-</style>
-```
-
-```js
-// router中的index.js页面
-
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import demo from '@/components/demo'
-import Rating from '@/components/Rating'
-import TodoList from '@/components/TodoList'
-
-// 使用路由
-Vue.use(Router)
-
-export default new Router({
-　mode: 'history', //可以是去掉#号
-  routes: [
-    {// 首页
-      path: '/',
-      name: 'home',
-      component: HelloWorld
-    },
-    {// demo
-      path:'/demo',
-      name: 'demo',
-      component: demo,
-      // 子路由配置
-      children:[
-        {// 评分页面
-            path:'/Rating',
-            name:'Rating',
-            component:Rating//组件名字
-        },
-        {// 列表生成
-            path:'/TodoList',
-            name:'TodoList',
-            component:TodoList//组件名字
-        }
-      ]
+export default{
+  // 数据存放
+  data(){
+    return{
+      stars:3,
+      maxStars: 5
+    } 
+  },
+  // 方法存放
+  methods:{
+    // 改变星级方法
+    changeStar:function(e){
+      // 让self=this，避免this指向出现问题
+      var self = this;
+      // 星级对于当前星级，也可以传参数为index+1计算
+      self.stars = e;
     }
-    
-  ]
-})
-
-```
-### 局部组件及全局组件
-局部组件：
-通过在App.vue中引入组件及定义components来进行输出渲染。
-
-```html
-<!-- App.vue -->
-<template>
-    <div id="app">
-        ...
-        <!-- 驼峰写法可转化为此 -->
-        <header-com></header-com>
-        ...
-    </div>
-</template>
-
-<script>
-// 局部组件
-import header from '@/components/header.vue';
-
-// Vue 实例化
-export default {
-  // vue组件的name属性主要用于方便debug.
-  name: 'App',
-  // 引入组件
-  components:{
-    'headerCom':header
   }
 }
 </script>
 
-<style>
-...
+<style scoped lang="less">
+// 在webpack中默认配置。安装了less及less-loader，使用less编译
+// scoped的作用仅仅是限定css的作用域，防止变量污染。
+  .rating {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #a7a8a8;
+    .list {
+    margin: 0 0 5px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .list:hover .star {
+    color: #f3d23e;
+  }
+  .star {
+    display: inline-block;
+    cursor: pointer;
+    font-size:50px;
+  }
+  .star:hover ~ .star:not(.active) {
+    color: inherit;
+  }
+  .active {
+    color: #f3d23e;
+  }
+  }
+  
 </style>
 ```
-全局组件：
-通过在main.js中定义全局组件，并且在App.vue中引入组件标签来进行输出渲染。
-
-```js
-// main.js
-...
-import footer from '@/components/footer.vue'
-
-// 全局组件
-Vue.component('footer-com',footer)
-
-...
-```
-```html
-<!-- App.vue -->
-<template>
-    <div id="app">
-        ...
-        <footer-com></footer-com>
-        ...
-    </div>
-</template>
-
-<script>
-// Vue 实例化
-export default {
-  // vue组件的name属性主要用于方便debug.
-  name: 'App'
-}
-</script>
-
-<style>
-...
-</style>
-```
-
-
-
-### 简单评分系统
-> 制作一个简单的评分系统，利用Vue的数据双向绑定功能，通过点击来进行星级评分及数量的对应文字输出。（具体查看demo中的Rating实例及对应的代码注释）
-
-知识点：
-- for循环渲染
-- 数据传递
-- 双向绑定
-- 简单数组操作
-- 监听器
-- 简单运算输出
-
-demo启动后目录：http://localhost:8080/Rating
-
-### 简单父子组件交互
-> 制作一个简单的通过输入框来传递值，对子组件数据进行渲染的，同时子组件调用父组件方法进行数据删除的demo（具体查看demo中的TodoList实例及对应的代码注释）
-
-知识点：
-- 父组件:content传递给子组件，子组件props:['content']获取参数
-- 子组件提过$emit调取父组件@msg方法
-- props单参数及多参数获取渲染
-- $emit传递单参数及多参数方法
-
-demo启动后目录：http://localhost:8080/TodoList

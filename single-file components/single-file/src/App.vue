@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <header-com></header-com>
     <img src="./assets/logo.png">
     <p>当前路由name：{{ this.$route.name }}</p>
     <p>当前路由path：{{ this.$route.path }}</p>
@@ -8,12 +9,22 @@
       <router-link class="router-a" to="/demo">demo</router-link>
     </div> 
     <router-view/>
+    <footer-com></footer-com>
   </div>
 </template>
 
 <script>
+// 局部组件
+import header from '@/components/header.vue';
+
+// Vue 实例化
 export default {
-  name: 'App'
+  // vue组件的name属性主要用于方便debug.
+  name: 'App',
+  // 引入组件
+  components:{
+    'headerCom':header
+  }
 }
 </script>
 

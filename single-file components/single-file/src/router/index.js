@@ -5,6 +5,7 @@ import demo from '@/components/demo'
 import Rating from '@/components/Rating'
 import TodoList from '@/components/TodoList'
 
+// 使用路由
 Vue.use(Router)
 
 export default new Router({

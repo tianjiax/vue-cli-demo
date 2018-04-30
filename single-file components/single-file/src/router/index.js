@@ -28,17 +28,17 @@ export default new Router({
       // 子路由配置
       children:[
         {// 评分页面
-            path:'/Rating',
+            path:'/demo/Rating',
             name:'Rating',
             component:Rating//组件名字
         },
         {// 列表生成
-            path:'/TodoList',
+            path:'/demo/TodoList',
             name:'TodoList',
             component:TodoList//组件名字
         },
         {// 获取数据方式，类似ajax
-            path:'/resource',
+            path:'/demo/resource',
             name:'resource',
             component:resource//组件名字
         }

@@ -188,3 +188,13 @@ demo启动后目录：http://localhost:8080/Rating
 - $emit传递单参数及多参数方法
 
 demo启动后目录：http://localhost:8080/TodoList
+
+### 请求获取数据渲染
+[测试用ajax接口可支持跨域](https://note.youdao.com/)
+> 提过vue-resource来进行动态获取数据的操作（类似ajax作用，具体使用自己查阅文档）。
+
+知识点：
+- 动态获取数据并输出
+- 衍生接口增删改查
+
+demo启动后目录：http://localhost:8080/resource

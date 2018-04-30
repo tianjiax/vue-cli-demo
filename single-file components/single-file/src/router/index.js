@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import VueResource from 'vue-resource'
 import HelloWorld from '@/components/HelloWorld'
 import demo from '@/components/demo'
 import Rating from '@/components/Rating'
 import TodoList from '@/components/TodoList'
+import resource from '@/components/resource'
 
 // 使用路由
 Vue.use(Router)
+Vue.use(VueResource)
 
 export default new Router({
   //vue-router 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。
@@ -33,6 +36,11 @@ export default new Router({
             path:'/TodoList',
             name:'TodoList',
             component:TodoList//组件名字
+        },
+        {// 获取数据方式，类似ajax
+            path:'/resource',
+            name:'resource',
+            component:resource//组件名字
         }
       ]
     }

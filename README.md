@@ -14,6 +14,12 @@ $ npm init
 # 启动项目
 $ npm run dev
 ```
+### 组件生命周期方法及调用的时机
+官网流程图
+![image](https://cn.vuejs.org/images/lifecycle.png)
+对应生命周期方法及调用的时机
+![image](https://s1.ax1x.com/2018/04/29/CGiVZn.png)
+
 ### 路由
 > 简单路由配置及子路由配置，详看如下：
 

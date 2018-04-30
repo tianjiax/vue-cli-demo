@@ -1,8 +1,9 @@
 <template>
 	<div>
 		<div  class="route-a-box">
-			<router-link class="router-a" to="/Rating">Star</router-link>
-			<router-link class="router-a" to="/TodoList">TodoList</router-link>
+			<router-link class="router-a" to="/Rating">星级评分</router-link>
+			<router-link class="router-a" to="/TodoList">列表操作</router-link>
+			<router-link class="router-a" to="/resource">动态数据</router-link>
 		</div>
 		<router-view></router-view>
 	</div>

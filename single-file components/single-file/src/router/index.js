@@ -6,6 +6,7 @@ import demo from '@/components/demo'
 import Rating from '@/components/Rating'
 import TodoList from '@/components/TodoList'
 import resource from '@/components/resource'
+import infiniteLoading from '@/components/infinite-loading'
 
 // 使用路由
 Vue.use(Router)
@@ -41,6 +42,11 @@ export default new Router({
             path:'/demo/resource',
             name:'resource',
             component:resource//组件名字
+        },
+        {// 无限滚动插件
+            path:'/demo/infinite-loading',
+            name:'infinite-loading',
+            component:infiniteLoading//组件名字
         }
       ]
     }

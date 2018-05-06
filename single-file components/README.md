@@ -93,6 +93,38 @@ export default new Router({
 })
 
 ```
+##### 链接传参及获取方法
+```html
+<!--// 入口写法-->
+<router-link class="router-a" :to="{path:'/demo',query:{name:'demo',txt:'举个栗子'}}">demo</router-link>
+```
+```html
+<!--// 获取写法-->
+<div>我是链接上拼接参数的name：{{ this.$route.query.name }}</div>
+<div>我是链接上拼接参数的txt：{{ this.$route.query.txt }}</div>
+```
+##### 简单组件过渡动画
+```
+<template>
+    <transition name="component-fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+</template>
+<script>
+...
+</script>
+<style>
+/* 简单组件切换动画 */
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
+```
+
 ### 局部组件及全局组件
 局部组件：
 通过在App.vue中引入组件及定义components来进行输出渲染。
@@ -236,3 +268,4 @@ https://www.imooc.com/article/22673
 组件外部管理状态
 全局变量
 多个或者单个组件在其修改时同时更新（必须使用该变量），只能通过mutations改变
+

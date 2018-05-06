@@ -1,14 +1,16 @@
 <template>
   <div id="app">
     <header-com></header-com>
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png" style="display:none">
     <p>当前路由name：{{ this.$route.name }}</p>
     <p>当前路由path：{{ this.$route.path }}</p>
     <div class="route-a-box">
       <router-link class="router-a" to="/">home</router-link>
-      <router-link class="router-a" to="/demo">demo</router-link>
+      <router-link class="router-a" :to="{path:'/demo',query:{name:'demo',txt:'举个栗子'}}">demo</router-link>
     </div> 
-    <router-view/>
+    <transition name="component-fade" mode="out-in">
+      <router-view/>
+    </transition>
     <footer-com></footer-com>
   </div>
 </template>
@@ -50,5 +52,13 @@ export default {
 .router-link-exact-active.router-link-active{
   color:red;
   border-bottom-color:red
+}
+/* 简单组件切换动画 */
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active for below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

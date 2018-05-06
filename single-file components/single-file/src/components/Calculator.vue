@@ -42,19 +42,20 @@ export default{
 <style scoped lang="less">
 .out-box{
 	position: relative;
-	height: 300px;
 	width: 300px;
-	margin: 0 auto
+	margin: 10px auto;
+	border: 1px solid #ddd;
+	border-bottom: none
 }
 .result,.enter{
 	text-align: right;
-	width: 100%;
 	word-wrap:break-word; 
 	word-break:break-all;
+	margin-right: 10px;
 }
 .result{
 	font-size: 40px;
-	margin-top: 80px;
+	margin-top: 20px;
 	min-height: 60px;
 }
 .enter{
@@ -64,7 +65,8 @@ export default{
 .cal-box{
 	&:after{
 		content: '';
-		clear:both
+		clear:both;
+		display: block
 	}
 	.keyboard-class{
 		box-sizing:border-box;

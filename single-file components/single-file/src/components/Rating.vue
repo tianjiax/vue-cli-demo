@@ -41,6 +41,7 @@ export default{
     color: #a7a8a8;
     .list {
 	  margin:0 auto;
+	  -webkit-padding-start: 0px;
 	  padding: 0;
 	  list-style-type: none;
 	}

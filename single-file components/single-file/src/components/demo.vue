@@ -5,6 +5,7 @@
 			<router-link class="router-a" to="/demo/TodoList">列表操作</router-link>
 			<router-link class="router-a" to="/demo/resource">动态数据</router-link>
 			<router-link class="router-a" to="/demo/infinite-loading">无限滚动</router-link>
+			<router-link class="router-a" to="/demo/Calculator">计算器</router-link>
 		</div>
 		<router-view></router-view>
 	</div>

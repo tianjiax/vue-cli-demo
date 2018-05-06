@@ -7,9 +7,11 @@ import Rating from '@/components/Rating'
 import TodoList from '@/components/TodoList'
 import resource from '@/components/resource'
 import infiniteLoading from '@/components/infinite-loading'
+import Calculator from '@/components/Calculator'
 
 // 使用路由
 Vue.use(Router)
+// 使用ajax
 Vue.use(VueResource)
 
 export default new Router({
@@ -47,6 +49,11 @@ export default new Router({
             path:'/demo/infinite-loading',
             name:'infinite-loading',
             component:infiniteLoading//组件名字
+        },
+        {// 计算器
+            path:'/demo/Calculator',
+            name:'Calculator',
+            component:Calculator//组件名字
         }
       ]
     }

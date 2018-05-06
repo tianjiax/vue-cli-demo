@@ -190,7 +190,7 @@ demo启动后目录：http://localhost:8080/demo//Rating
 demo启动后目录：http://localhost:8080/demo//TodoList
 
 ### 请求获取数据渲染
-[测试用ajax接口可支持跨域](https://note.youdao.com/)
+[测试用ajax接口可支持跨域](http://jsonplaceholder.typicode.com/posts)
 > 提过vue-resource来进行动态获取数据的操作（类似ajax作用，具体使用自己查阅文档）。
 
 知识点：
@@ -217,3 +217,22 @@ demo启动后目录：http://localhost:8080/demo//resource
 - 加载状态
 
 demo启动后目录：http://localhost:8080/demo/infinite-loadingurce
+
+### 简单计算器
+[参考文档](https://mp.weixin.qq.com/s/xmNKIODUR3T9sbuoj8c6qw)
+Vuex适合在较为大型复杂的项目中使用。在实际开发过程中，简单的计算器也许只算得上是一个简单的小项目，你完全可以不用Vuex来实现。所以，以下我们演示的案例只作为demo来讲解Vuex，让大家能够轻松地搞懂Vuex的用法，不代表在实际开发中的做法。
+> vuex 全局变量的简单使用及数据传递。该demo中应用的vuex在src目录下的main.js
+
+知识点：
+- 全局变量
+- 在Vuex中不能任意修改应用层的状态，要修改，就得用它提供的唯一途径：通过commit提交mutation。
+- 提过计算属性computed与this.$store获取数据
+
+demo启动后目录：http://localhost:8080/demo/Calculator
+
+### vuex
+https://www.imooc.com/article/22719
+https://www.imooc.com/article/22673
+组件外部管理状态
+全局变量
+多个或者单个组件在其修改时同时更新（必须使用该变量），只能通过mutations改变

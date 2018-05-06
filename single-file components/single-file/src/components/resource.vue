@@ -18,7 +18,7 @@ export default{
 	methods:{
 		getData(){
 			var self = this;
-			self.$http.get('http://jsonplaceholder.typicode.com/posts').then(response => {
+			self.$http.get('/api/posts').then(response => {
  
     		// get body data
 		    self.souceArr = response.data;

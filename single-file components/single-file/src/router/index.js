@@ -8,6 +8,7 @@ import TodoList from '@/components/TodoList'
 import resource from '@/components/resource'
 import infiniteLoading from '@/components/infinite-loading'
 import Calculator from '@/components/Calculator'
+import VuexDemo from '@/components/VuexDemo'
 
 // 使用路由
 Vue.use(Router)
@@ -54,6 +55,11 @@ export default new Router({
             path:'/demo/Calculator',
             name:'Calculator',
             component:Calculator//组件名字
+        },
+        {// vuex的简单应用
+            path:'/demo/VuexDemo',
+            name:'VuexDemo',
+            component:VuexDemo//组件名字
         }
       ]
     }

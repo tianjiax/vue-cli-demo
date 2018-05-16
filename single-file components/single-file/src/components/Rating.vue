@@ -37,7 +37,7 @@ export default{
 // scoped的作用仅仅是限定css的作用域，防止变量污染。
   .rating {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size:0.28rem;
     color: #a7a8a8;
     .list {
 	  margin:0 auto;
@@ -51,7 +51,7 @@ export default{
 	.star {
 	  display: inline-block;
 	  cursor: pointer;
-	  font-size:50px;
+	  font-size:1rem;
 	}
 	.star:hover ~ .star:not(.active) {
 	  color: inherit;

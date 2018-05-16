@@ -67,7 +67,10 @@ export default {
 
 <style>
 .resource-li{
-	padding: 5px;
-	border-bottom: 1px solid #ccc
+	padding: 0.05rem;
+	border-bottom: 0.01rem solid #ccc
 }	
+.infinite-status-prompt{
+	font-size: 0.3rem !important
+}
 </style>

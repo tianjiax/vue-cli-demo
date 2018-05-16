@@ -30,24 +30,27 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 1rem 0;
+  font-size:0.28em;
 }
 .route-a-box{
-  margin-bottom:20px;
+  margin-bottom:0.20rem;
+  font-size: 0.3rem
 }
 .router-a{
-  padding:10px;
+  padding:0.10rem;
   color:green;
-  border-bottom:1px solid green;
+  border-bottom:0.01rem solid green;
   text-decoration:none;
-  margin:5px;
+  margin:0.05rem;
 }
 .router-link-exact-active.router-link-active{
   color:red;

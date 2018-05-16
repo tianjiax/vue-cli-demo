@@ -20,6 +20,14 @@ $ npm run dev
 对应生命周期方法及调用的时机
 ![image](https://s1.ax1x.com/2018/04/29/CGiVZn.png)
 
+### 局域网调试
+> 我们可以通过设置/config/index.js中文件的host为0.0.0.0来进行本地局域网调试。
+
+```js
+// index.js
+host: '0.0.0.0',  
+```
+
 ### 路由
 > 简单路由配置及子路由配置，详看如下：
 

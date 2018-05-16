@@ -33,7 +33,11 @@ export default{
 
 <style>
 .resource-li{
-	padding: 5px;
-	border-bottom: 1px solid #ccc
+	padding: 0.10rem;
+	border-bottom: 0.01rem solid #ccc;
 }	
+button{
+	font-size: 0.24rem;
+	padding: 0 0.2rem
+}
 </style>

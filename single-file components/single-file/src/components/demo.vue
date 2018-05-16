@@ -37,17 +37,18 @@ export default{
 
 <style scoped>
 .query-box{
-	margin: 10px;
+	margin: 0.10rem;
 }
 .route-a-box{
 }
 .router-a{
-  padding:10px;
+  padding:0.10rem;
   color:#35495e;
   border-bottom:1px solid #35495e;
   text-decoration:none;
-  margin:5px;
-  font-size:14px;
+  margin:0.05rem;
+  font-size:0.28rem;
+  display: inline-block;
 }
 .router-link-exact-active.router-link-active{
   color:blue;

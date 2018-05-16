@@ -42,25 +42,25 @@ export default{
 <style scoped lang="less">
 .out-box{
 	position: relative;
-	width: 300px;
-	margin: 10px auto;
-	border: 1px solid #ddd;
+	width: 300*2/100rem;
+	margin: 10*2/100rem auto;
+	border: 1*2/100rem solid #ddd;
 	border-bottom: none
 }
 .result,.enter{
 	text-align: right;
 	word-wrap:break-word; 
 	word-break:break-all;
-	margin-right: 10px;
+	margin-right: 10*2/100rem;
 }
 .result{
-	font-size: 40px;
-	margin-top: 20px;
-	min-height: 60px;
+	font-size: 40*2/100rem;
+	margin-top: 20*2/100rem;
+	min-height: 60*2/100rem;
 }
 .enter{
-	font-size: 20px;
-	min-height: 24px
+	font-size: 20*2/100rem;
+	min-height: 24*2/100rem
 }
 .cal-box{
 	&:after{
@@ -72,10 +72,10 @@ export default{
 		box-sizing:border-box;
 		-moz-box-sizing:border-box; /* Firefox */
 		-webkit-box-sizing:border-box; /* Safari */
-		border-bottom:1px solid #ddd;
+		border-bottom:1*2/100rem solid #ddd;
 		float: left;
 		width: 25%;
-		padding: 10px;
+		padding: 10*2/100rem;
 		cursor: pointer;
 		&:active{
 			color:#fff;

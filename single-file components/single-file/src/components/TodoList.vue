@@ -54,14 +54,33 @@ export default{
 
 <style scoped>
 ul{
-	width:200px;
+	width:100%;
 	margin:0 auto;
-	margin-top:20px;
+	margin-top:0.2rem;
 	color:#fff;
+	font-size: 0.28rem
 }  
 li{
-	padding:10px 0;
-	margin:5px 0;
+	padding:0.2rem 0;
+	margin:0.05rem 0;
 	background-color:green;
+	width: 5rem;
+	margin-left: 1rem;
+}
+input{
+	width: 40%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	font-size: 0.24rem;
+	padding: 0 5%;
+	background: green;
+	color: #fff;
+	border: none;
+}
+button{
+	height: 0.5rem;
+	line-height: 0.5rem;
+	font-size:0.24rem;
+	width: 30%;
 }
 </style>

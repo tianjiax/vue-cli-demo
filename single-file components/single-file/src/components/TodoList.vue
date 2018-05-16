@@ -62,10 +62,9 @@ ul{
 }  
 li{
 	padding:0.2rem 0;
-	margin:0.05rem 0;
 	background-color:green;
 	width: 5rem;
-	margin-left: 1rem;
+	margin-top: 0.1rem;
 }
 input{
 	width: 40%;
@@ -73,8 +72,7 @@ input{
 	line-height: 0.5rem;
 	font-size: 0.24rem;
 	padding: 0 5%;
-	background: green;
-	color: #fff;
+	background: #f4f4f4;
 	border: none;
 }
 button{
